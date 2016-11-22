@@ -6,8 +6,8 @@ require "io/console"
 
 RSpec.configure do |config|
 	config.around(:example) do |example|
-		username = 'chase%40crossbrowsertesting.com'
-		authkey = 'u81305495037f796'
+		username = 'you%40yourdomain.com'
+		authkey = 'yourauthkey'
 
 		caps = Selenium::WebDriver::Remote::Capabilities.new
 
