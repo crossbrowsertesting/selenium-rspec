@@ -77,7 +77,9 @@ end
 
 ```
 
-As you can see from the code, we've used Selenium to create a Remote WebDriver that's pointed to our hub and uses your username and authorization key. This will start a test to Chrome 54 on Windows 10. Our capabilities also allow you to record videos of your test and record network traffic. If you uncomment the lines where we instantiate a tunnel you can also start a local connection so you can test locally hosted content. Just ensure you've installed [cbt_tunnels](https://github.com/crossbrowsertesting/cbt-tunnel-nodejs) beforehand. We're not done yet, now we need to write our first test in RSpec. Luckally we can now extend all of our tests from this same context to test in the cloud. Create another file called "todo_example.rb" and copy the following code to see RSpec in action:
+As you can see from the code, we've used Selenium to create a Remote WebDriver that's pointed to our hub and uses your username and authorization key. This will start a test to Chrome 54 on Windows 10. Our capabilities also allow you to record videos of your test and record network traffic. 
+
+If you uncomment the lines where we instantiate a tunnel you can also start a local connection so you can test locally hosted content. Just ensure you've installed [cbt_tunnels](https://github.com/crossbrowsertesting/cbt-tunnel-nodejs) beforehand. We're not done yet, now we need to write our first test in RSpec. Luckally we can now extend all of our tests from this same context to test in the cloud. Create another file called "todo_example.rb" and copy the following code to see RSpec in action:
 
 ```
 require_relative "./cbt"
