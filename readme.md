@@ -1,4 +1,4 @@
-* Selenium Testing with CBT and RSpec
+** Selenium Testing with CBT and RSpec
 
 [RSpec](http://rspec.info/) provides an awesome tool for writing and executable examples of how your code should behave. This makes it perfect for writing [Selenium](http://www.seleniumhq.org/) tests in Ruby, and because Ruby works well with our Cloud Service out of the box, we'll show you to do the same with RSpec. We'll start by getting a few necessary dependecies:
 
