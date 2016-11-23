@@ -1,6 +1,5 @@
 require "selenium-webdriver"
 require "rspec"
-require "test-unit"
 require "rest-client"
 require "io/console"
 
