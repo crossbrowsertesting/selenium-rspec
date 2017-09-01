@@ -12,8 +12,8 @@ RSpec.configure do |config|
 
 		caps["name"] = "Login Form Example"
 		caps["build"] = "1.0"
-		caps["browser_api_name"] = "Chrome54x64"
-		caps["os_api_name"] = "Win10"
+		caps["browserName"] = "Chrome" 		# by default this pulls the latest version
+		caps["platform"] = "Windows 10" 	# To specify version, add caps["version"] = "desired version"
 		caps["screen_resolution"] = "1024x768"
 		caps["record_video"] = "true"
 		caps["record_network"] = "true"
