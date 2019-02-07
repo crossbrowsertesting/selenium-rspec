@@ -17,7 +17,7 @@ gem install selenium-webdriver
 Lastly, we'll need [Request-Client](https://github.com/rest-client/rest-client) so we can make RESTful calls to our API:
 
 ```
-gem install request-client
+gem install rest-client
 ```
 
 Now we're ready to get started. From your terminal, navigate to a new directory where we can start writing our tests. From there, create a file called "cbt.rb". This will allow us to create the environment for testing to CBT configurations. Copy to following code into that file:
