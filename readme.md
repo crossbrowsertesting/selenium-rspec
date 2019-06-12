@@ -41,10 +41,10 @@ RSpec.configure do |config|
 		caps["platform"] = "Windows 10" 	# To specify version, add caps["version"] = "desired version"
 		caps["screen_resolution"] = "1024x768"
 		caps["record_video"] = "true"
-		caps["record_network"] = "true"
+		caps["record_network"] = "false"
 
 		puts "Starting tunnel..."
-		
+
 		# uncomment the following to make your test start a tunnel
 
 		=begin
@@ -77,14 +77,14 @@ end
 
 ```
 
-As you can see from the code, we've used Selenium to create a Remote WebDriver that's pointed to our hub and uses your username and authorization key. This will start a test to Chrome 54 on Windows 10. Our capabilities also allow you to record videos of your test and record network traffic. 
+As you can see from the code, we've used Selenium to create a Remote WebDriver that's pointed to our hub and uses your username and authorization key. This will start a test to Chrome 54 on Windows 10. Our capabilities also allow you to record videos of your test and record network traffic.
 
 If you uncomment the lines where we instantiate a tunnel you can also start a local connection so you can test locally hosted content. Just ensure you've installed [cbt_tunnels](https://github.com/crossbrowsertesting/cbt-tunnel-nodejs) beforehand. We're not done yet, now we need to write our first test in RSpec. Luckally we can now extend all of our tests from this same context to test in the cloud. Create another file called "todo_example.rb" and copy the following code to see RSpec in action:
 
 ```
 require_relative "./cbt"
 
-describe "Todo Example" do 
+describe "Todo Example" do
 	it "can test a todo-app" do
 		# maximize the browser window
 		@driver.manage.window.maximize
@@ -98,7 +98,7 @@ describe "Todo Example" do
 
         elems = @driver.find_elements(:class, "done-true")
         expect(elems.length).to eq(2)
-        
+
         puts "Entering Text"
         @driver.find_element(:id, "todotext").send_keys("Run your first Selenium Test")
         @driver.find_element(:id, "addbutton").click
@@ -122,6 +122,6 @@ You might not be able to tell what this is doing until we run it, so let's go ah
 rspec todo_example.rb
 ```
 
-Go over to our app, and see it working. You should see where we're testing a basic Angular To-Do-App. Selenium will checkmark boxes, add to the list, and even check that our archive link works. Its simple, but its meant to show you the basics of how Selenium can work with functional testing for your own web applications. At the end we set the score to pass (if we made it through without issues), so you know which test cases you need to look for. 
+Go over to our app, and see it working. You should see where we're testing a basic Angular To-Do-App. Selenium will checkmark boxes, add to the list, and even check that our archive link works. Its simple, but its meant to show you the basics of how Selenium can work with functional testing for your own web applications. At the end we set the score to pass (if we made it through without issues), so you know which test cases you need to look for.
 
 That's just the start of what you can do with Selenium! There's really so much more you can do, and RSpec makes it easy to set up and perform your tests on the fly. If you have any questions or concerns as you use our service, don't hesitate to [get in touch](mailto: info@crossbrowsertesting.com). We're always happy to help!
