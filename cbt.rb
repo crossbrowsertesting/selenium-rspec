@@ -16,10 +16,10 @@ RSpec.configure do |config|
 		caps["platform"] = "Windows 10" 	# To specify version, add caps["version"] = "desired version"
 		caps["screen_resolution"] = "1024x768"
 		caps["record_video"] = "true"
-		caps["record_network"] = "true"
+		caps["record_network"] = "false"
 
 		puts "Starting tunnel..."
-		
+
 		begin
 			tunnel = IO.popen("cbt_tunnels --username " + username + " --authkey " + authkey + "asadmin", "r+")
 		rescue Exception => ex
